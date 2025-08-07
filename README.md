@@ -69,7 +69,7 @@ python main.py
 #### 安装步骤
 ```bash
 # 1. 克隆项目
-git clone <repository-url>
+git clone https://github.com/South-Winder12138/mineru-service.git
 cd mineru-service
 
 # 2. 创建虚拟环境 (使用Python 3.10+)
@@ -80,8 +80,35 @@ source .venv/bin/activate  # Linux/macOS
 # 3. 安装依赖
 pip install -r requirements.txt
 
-# 4. 启动服务
+# 4. 下载模型文件 (14GB+)
+python scripts/download_models_external.py --auto
+
+# 5. 启动服务
 python main.py
+```
+
+### 📦 模型下载说明
+
+由于模型文件较大(14GB+)，未包含在Git仓库中，需要单独下载：
+
+#### 获取模型的方式：
+- 📦 [GitHub Releases](https://github.com/South-Winder12138/mineru-service/releases)
+- ☁️ 百度网盘: [链接待补充]
+- 🌐 Google Drive: [链接待补充]
+
+#### 下载和安装：
+```bash
+# 方式1: 自动检查和下载
+python scripts/download_models_external.py --auto
+
+# 方式2: 从URL下载
+python scripts/download_models_external.py --url <download_url>
+
+# 方式3: 从本地文件安装
+python scripts/download_models_external.py --local mineru_models.tar.gz
+
+# 检查模型状态
+python scripts/download_models_external.py --check
 ```
 
 ### 验证安装

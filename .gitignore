@@ -94,21 +94,22 @@ current_packages.txt
 # MinerU Service Specific
 # =====================
 
-# Large archive files (excluding model files managed by Git LFS)
-# *.tar.gz files are tracked by Git LFS (see .gitattributes)
+# Large archive files and model packages
+*.tar.gz
 *.tar.bz2
 *.tar.xz
 *.zip
 
-# Model packages - MANAGED BY GIT LFS
-# mineru_models.tar.gz is tracked by Git LFS and included in repository
-# mineru_models_test/ - test model directory (can be large)
+# Model packages - EXTERNAL HOSTING
+# Large model files are hosted externally due to GitHub size limits
+mineru_models.tar.gz
 mineru_models_test/
 
-# Note: Git LFS Configuration
-# - *.tar.gz files are managed by Git LFS
-# - mineru_models.tar.gz (14GB) will be uploaded via LFS
-# - Users get complete project including models automatically
+# Note: Model Management Strategy
+# - Model files are too large for GitHub (14GB+)
+# - Use scripts/download_models.py to download models
+# - Models will be downloaded to data/cache/ on first run
+# - See MODEL_MANAGEMENT_STRATEGY.md for details
 
 # Model cache directories (very large - 16GB+)
 data/cache/
