@@ -332,17 +332,6 @@ GET /api/v1/documents/tasks
 
 ### 创建完整部署包
 
-#### 方法一：使用脚本创建（推荐）
-```bash
-# 运行部署包创建脚本
-./scripts/create_deployment_package.sh
-
-# 生成的文件：
-# - mineru-service-complete.tar.gz (约30GB) - 完整部署包
-# - mineru-service-lite.tar.gz (约1GB) - 轻量版（不含模型）
-```
-
-#### 方法二：手动创建
 ```bash
 # 清理项目
 ./scripts/cleanup.sh

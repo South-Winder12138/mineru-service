@@ -92,7 +92,7 @@ python main.py
 由于模型文件较大(14GB+)，未包含在Git仓库中，需要单独下载：
 
 #### 获取模型的方式：
-- 📦 [GitHub Releases](https://github.com/South-Winder12138/mineru-service/releases)
+
 - ☁️ 百度网盘: [链接待补充]
 - 🌐 Google Drive: [链接待补充]
 
