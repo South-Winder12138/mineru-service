@@ -1,0 +1,210 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+.venv/
+venv/
+ENV/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+logs/*.log
+*.log
+
+# Uploads and outputs (keep directories but ignore contents)
+uploads/*
+!uploads/.gitkeep
+outputs/*
+!outputs/.gitkeep
+
+# Temporary files
+*.tmp
+*.temp
+temp/
+tmp/
+
+# Environment variables
+.env
+.env.local
+.env.production
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Cache
+.cache/
+.pytest_cache/
+
+# Coverage
+.coverage
+htmlcov/
+
+# MyPy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# Package files
+current_packages.txt
+
+# MinerU Service Specific
+# =====================
+
+# Large archive files (excluding model files managed by Git LFS)
+# *.tar.gz files are tracked by Git LFS (see .gitattributes)
+*.tar.bz2
+*.tar.xz
+*.zip
+
+# Model packages - MANAGED BY GIT LFS
+# mineru_models.tar.gz is tracked by Git LFS and included in repository
+# mineru_models_test/ - test model directory (can be large)
+mineru_models_test/
+
+# Note: Git LFS Configuration
+# - *.tar.gz files are managed by Git LFS
+# - mineru_models.tar.gz (14GB) will be uploaded via LFS
+# - Users get complete project including models automatically
+
+# Model cache directories (very large - 16GB+)
+data/cache/
+data/models/
+data/temp/
+data/hf_cache/
+data/torch/
+
+# HuggingFace and ModelScope cache
+.cache/huggingface/
+.cache/modelscope/
+.cache/torch/
+
+# Test files (keep structure but ignore large files)
+test_files/*.pdf
+test_files/*.docx
+test_files/*.doc
+test_files/*.zip
+test_files/*.tar.gz
+
+# Keep small text files for testing
+!test_files/*.txt
+!test_files/*.md
+!test_files/*.xml
+
+# Runtime and processing files
+*.processing
+*.lock
+*.pid
+
+# Backup files
+*.bak
+*.backup
+*.orig
+
+# macOS specific (additional)
+.AppleDouble
+.LSOverride
+Icon?
+
+# Windows specific (additional)
+desktop.ini
+$RECYCLE.BIN/
+
+# Linux specific
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+
+# Docker specific
+.dockerignore
+docker-compose.override.yml
+
+# Deployment specific
+deployment/
+dist/
+build/
+
+# Configuration overrides
+config.local.py
+config.override.py
+local_settings.py
+
+# SSL certificates and keys
+*.crt
+*.key
+*.pem
+*.p12
+*.pfx
+*.cer
+
+# API keys and secrets
+secrets.json
+api_keys.json
+.secrets
+credentials.json
+
+# Development tools
+.pytest_cache/
+.tox/
+.nox/
+.coverage.*
+coverage.xml
+*.cover
+.hypothesis/
+
+# Profiling
+*.prof
+*.pstats
+
+# Monitoring and metrics
+metrics/
+monitoring/
+
+# Temporary processing directories
+processing/
+temp_*
+tmp_*

@@ -1,0 +1,29 @@
+# ===== Web服务框架 =====
+fastapi>=0.116.1
+uvicorn[standard]>=0.35.0
+python-multipart>=0.0.6
+
+# ===== 数据验证和配置 =====
+pydantic>=2.11.7
+pydantic-settings>=2.10.1
+
+# ===== 文件和系统工具 =====
+aiofiles>=24.1.0
+loguru>=0.7.3
+psutil>=7.0.0
+
+# ===== MinerU文档处理引擎 =====
+mineru>=2.1.10
+
+# ===== 图像和文档处理 =====
+opencv-python>=4.12.0.88
+python-docx>=1.2.0
+reportlab>=4.4.3
+lxml>=6.0.0
+
+# ===== 深度学习框架 (MinerU依赖) =====
+torch>=2.8.0
+torchvision>=0.23.0
+
+# ===== PDF处理备用 =====
+pypdf>=3.17.0

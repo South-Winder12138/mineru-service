@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  mineru-service:
+    build: .
+    container_name: mineru-service
+    ports:
+      - "8002:8002"
+    volumes:
+      - ./uploads:/app/uploads
+      - ./outputs:/app/outputs
+      - ./logs:/app/logs
+    environment:
+      - HOST=0.0.0.0
+      - PORT=8002
+      - MAX_CONCURRENT_TASKS=3
+      - TASK_TIMEOUT=300
+      - LOG_LEVEL=INFO
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8002/api/v1/documents/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
