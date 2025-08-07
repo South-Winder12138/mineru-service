@@ -151,37 +151,6 @@ open http://localhost:8002/docs
 - 如需使用完整 MinerU 功能，需要手动下载模型到本地缓存目录
 
 
-## 🚀 跨环境部署指南
-
-### 📦 完整功能部署（推荐）
-
-如需在多台电脑上部署完整功能版本：
-
-1. **在联网环境中准备模型包**
-   ```bash
-   # 运行模型管理器获取部署指南
-   python scripts/model_manager.py guide
-   ```
-
-2. **传输到目标环境**
-   ```bash
-   # 复制整个项目和模型包
-   scp -r mineru-service/ user@target:/path/
-   scp mineru_models.tar.gz user@target:/path/mineru-service/
-   ```
-
-3. **在目标环境中部署**
-   ```bash
-   cd mineru-service
-   python -m venv .venv
-   source .venv/bin/activate
-   pip install -r requirements.txt
-   python scripts/model_manager.py install mineru_models.tar.gz
-   python main.py
-   ```
-
-
-
 ### 🔍 功能检测
 
 系统会自动检测可用功能：
@@ -218,18 +187,6 @@ python scripts/model_manager.py install mineru_models.tar.gz
 python main.py
 ```
 
-## 📦 创建部署包
-
-如需创建部署包进行分发：
-
-```bash
-# 创建完整部署包和轻量部署包
-./scripts/create_deployment_package.sh
-
-# 生成的文件：
-# - mineru-service-complete.tar.gz (约30GB) - 完整版，包含所有依赖和模型
-# - mineru-service-lite.tar.gz (约1GB) - 轻量版，需要联网安装依赖
-```
 
 **部署包特点对比**：
 
